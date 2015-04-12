@@ -71,8 +71,12 @@ class RockPaperScissorsViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         //Notice that this code works for both Scissors and Paper
-        let controller = segue.destinationViewController as! ResultViewController
-        controller.match = self.match
+        if segue.identifier == "throwDownScissors" {
+            let controller = segue.destinationViewController as! ResultViewController
+            controller.match = self.match
+        } else {
+            let controller = segue.destinationViewController as! HistoryViewController
+        }
     }
    
     @IBAction func showHistory(sender: AnyObject) {

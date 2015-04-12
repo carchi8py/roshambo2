@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="iYZ-Mq-4iF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Rock Paper Scissors View Controller-->
@@ -58,6 +59,9 @@
                                 <state key="normal" title="History">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="tGP-0h-0Gl" kind="modal" identifier="historySeque" id="t8W-es-AzB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,7 +133,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2li-T9-sgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="141"/>
+            <point key="canvasLocation" x="998" y="-274"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="ffX-dl-cgs">
+            <objects>
+                <viewController id="tGP-0h-0Gl" customClass="HistoryViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YqA-ja-EDn"/>
+                        <viewControllerLayoutGuide type="bottom" id="98e-wm-M1N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JNf-wY-gvW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kEf-BB-Dw5">
+                                <rect key="frame" x="0.0" y="20" width="320" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="98e-wm-M1N" firstAttribute="top" secondItem="kEf-BB-Dw5" secondAttribute="bottom" constant="20" id="NHP-E0-nWZ"/>
+                            <constraint firstItem="kEf-BB-Dw5" firstAttribute="leading" secondItem="JNf-wY-gvW" secondAttribute="leadingMargin" constant="-16" id="VI7-5q-6xF"/>
+                            <constraint firstItem="kEf-BB-Dw5" firstAttribute="top" secondItem="YqA-ja-EDn" secondAttribute="bottom" id="eno-D2-tqf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kEf-BB-Dw5" secondAttribute="trailing" constant="-16" id="vGa-BN-4KL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pph-xU-QXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="373"/>
         </scene>
     </scenes>
     <resources>
