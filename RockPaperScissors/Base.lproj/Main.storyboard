@@ -147,17 +147,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kEf-BB-Dw5">
-                                <rect key="frame" x="0.0" y="20" width="320" height="528"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kEf-BB-Dw5">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E2-pK-zfC">
+                                <rect key="frame" x="137" y="527" width="46" height="30"/>
+                                <state key="normal" title="ok">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToHome:" destination="tGP-0h-0Gl" eventType="touchUpInside" id="Yhv-AY-gzK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="98e-wm-M1N" firstAttribute="top" secondItem="kEf-BB-Dw5" secondAttribute="bottom" constant="20" id="NHP-E0-nWZ"/>
+                            <constraint firstItem="98e-wm-M1N" firstAttribute="top" secondItem="kEf-BB-Dw5" secondAttribute="bottom" constant="30" id="NHP-E0-nWZ"/>
                             <constraint firstItem="kEf-BB-Dw5" firstAttribute="leading" secondItem="JNf-wY-gvW" secondAttribute="leadingMargin" constant="-16" id="VI7-5q-6xF"/>
                             <constraint firstItem="kEf-BB-Dw5" firstAttribute="top" secondItem="YqA-ja-EDn" secondAttribute="bottom" id="eno-D2-tqf"/>
+                            <constraint firstAttribute="centerX" secondItem="4E2-pK-zfC" secondAttribute="centerX" id="sD6-PV-hmt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kEf-BB-Dw5" secondAttribute="trailing" constant="-16" id="vGa-BN-4KL"/>
+                            <constraint firstItem="4E2-pK-zfC" firstAttribute="top" secondItem="kEf-BB-Dw5" secondAttribute="bottom" constant="1" id="zkJ-xO-RqU"/>
                         </constraints>
                     </view>
                 </viewController>

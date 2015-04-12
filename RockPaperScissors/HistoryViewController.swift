@@ -11,4 +11,11 @@ import UIKit
 
 class HistoryViewController: UIViewController {
     
+    var history: [RPSMatch]!
+    
+    
+    @IBAction func backToHome(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
