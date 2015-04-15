@@ -17,6 +17,7 @@ class RockPaperScissorsViewController: UIViewController {
     var match: RPSMatch!
     var history = [RPSMatch]()
     
+    
     @IBAction func makeYourMove(sender: UIButton) {
         
         // The RPS enum holds a player's move
@@ -56,7 +57,7 @@ class RockPaperScissorsViewController: UIViewController {
         
             // Communicate the match
             resultVC.match = self.match
-            self.presentViewController(resultVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(resultVC, animated: true)
         }
         
         // 2nd Way: Code plus Segue
